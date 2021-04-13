@@ -3,6 +3,7 @@ const noteContainer = document.querySelector('.note-container');
 const saveBtn = document.querySelector('.save');
 const messageDiv = document.querySelector('.message');
 const textInput = document.querySelector('#note-input');
+const sidebar = document.querySelector('.sidebar');
 const notesDiv = document.querySelector('.notes');
 
 // [+] Functions [+]
@@ -38,10 +39,13 @@ addBtn.addEventListener('click', (e) => {
 
 saveBtn.addEventListener('click', (e) => {
 	e.preventDefault();
-	noteContainer.classList.add('block');
-	messageDiv.classList.remove('block');
-	addNote(textInput.value);
-	textInput.value = '';
+	if (textInput.value) {
+		noteContainer.classList.add('block');
+		messageDiv.classList.remove('block');
+		
+		addNote(textInput.value);
+		textInput.value = '';
+	}
 })
 
 notesDiv.addEventListener('click', (e) => {
