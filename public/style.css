@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+}
+
+.sidebar {
+	background: #2F3235;
+	padding: 0.6rem;
+	color: #fff;
+	height: 100vh;
+}
+
+.sidebar  header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.note {
+	margin-top: 0.4rem;
+	padding: 0.8rem 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #fff;
+}
+.addBtn {
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+.note-container {
+	padding: 0.5rem;
+	width: 100%;
+}
+.message {
+	margin: auto;
+}
+#note-input {
+	padding: 1rem;
+	background: #E7E5E5;
+	width: 100%;
+	height: 500px;
+	border: none;
+	font-size: 2rem;
+}
+.delete {
+	cursor: pointer;
+}
+.save {
+	background: #3AD4CB;
+	padding: 0.6rem;
+	border: none;
+	font-size: 1rem;
+	width: 140px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.save:hover {
+	opacity: 0.8;
+}
+
+.block {
+	display: none;
+}
